@@ -1,0 +1,48 @@
+{
+	"name": "CDR-Player",
+	"short_name": "CDR-Player",
+	"description": "Cool Dance Radio Player, out of love for Cool Dance Radio",
+	"id": "/?homescreen=1",
+	"start_url": "/?homescreen=1",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#FFFFFF",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "CDR-Player-48x48.png",
+			"sizes": "48x48",
+			"type": "image/png"
+		},
+		{
+			"src": "CDR-Player-72x72.png",
+			"sizes": "72x72",
+			"type": "image/png"
+		},
+		{
+			"src": "CDR-Player-96x96.png",
+			"sizes": "96x96",
+			"type": "image/png"
+		},
+		{
+			"src": "CDR-Player-144x144.png",
+			"sizes": "144x144",
+			"type": "image/png"
+		},
+		{
+			"src": "CDR-Player-168x168.png",
+			"sizes": "168x168",
+			"type": "image/png"
+		},
+		{
+			"src": "CDR-Player-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "CDR-Player-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
