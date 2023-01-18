@@ -14,4 +14,4 @@ $ yarn dev
 
 # Credits
 
-Bacgrkund image by [Tiago Cipriano](https://pixabay.com/users/tiagocipriano-8062125/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3157732) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3157732).
+Background image by [Tiago Cipriano](https://pixabay.com/users/tiagocipriano-8062125/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3157732) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3157732).
