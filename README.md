@@ -1,6 +1,6 @@
 # Cool Dance Radio Player
 
-A mobile first, fast and ad free progressive web app for listening to [Cool Dance Radio](https://www.cooldanceradio.com/). Build with [NuxtJS](https://nuxtjs.org/), [Vite](https://vite.nuxtjs.org/) and TypeScript.
+A mobile first, fast and ad free progressive web app for listening to [Cool Dance Radio](https://www.cooldanceradio.com/). Build with [NuxtJS](https://nuxt.com/), [Vite](https://vite.nuxtjs.org/) and [TypeScript](https://www.typescriptlang.org/).
 
 ## Development
 
