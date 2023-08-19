@@ -1,21 +1,19 @@
 import * as cheerio from 'cheerio'
 
-let $: cheerio.CheerioAPI
-
 export default function (section: string, html: string) {
-	$ = $ || cheerio.load(html)
+  const $: cheerio.CheerioAPI = cheerio.load(html)
 
-	return $(`.${section}`)
-		.map((_index, element) => ({
-			title: $(element).find('.title').text().trim(),
-			artist: $(element).find('.artist').text().trim(),
-			timestamp: $(element).find('.timestamp').text().trim(),
-		}))
-		.get()
+  return $(`.${section}`)
+    .map((_index, element) => ({
+      title: $(element).find('.title').text().trim(),
+      artist: $(element).find('.artist').text().trim(),
+      timestamp: $(element).find('.timestamp').text().trim(),
+    }))
+    .get()
 }
 
-export const getSeparator = (html: string) => {
-	$ = $ || cheerio.load(html)
+export function getSeparator(html: string) {
+  const $: cheerio.CheerioAPI = cheerio.load(html)
 
-	return $('.playing_track .separator').text().trim()
+  return $('.playing_track .separator').text().trim()
 }

@@ -1,13 +1,16 @@
-<template>
-	<NuxtLayout>
-		<h1>{{ error.message }}</h1>
-	</NuxtLayout>
-</template>
-
 <script setup lang="ts">
-import { H3Error } from 'h3'
+import type { H3Error } from 'h3'
 
 defineProps<{
-	error: H3Error
+  error: H3Error
 }>()
 </script>
+
+<template>
+  <NuxtLayout name="main">
+    <Card>
+      <h2><span>Nothing to see here...</span></h2>
+      <p>{{ error.message }}</p>
+    </Card>
+  </NuxtLayout>
+</template>

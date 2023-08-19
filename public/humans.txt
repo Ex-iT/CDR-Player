@@ -1,0 +1,14 @@
+/* TEAM */
+  Developer: Ex-iT
+  Site: https://github.com/Ex-iT/
+  Location: The Netherlands
+
+/* THANKS */
+  Name: Cool Dance Radio
+  Site: https://www.cooldanceradio.com/
+
+/* SITE */
+  Standards: HTML, CSS and JavaScript
+  Components: Nuxt and TypeScript
+  Software: Visual Studio Code
+  Github: https://github.com/Ex-iT/CDR-Player

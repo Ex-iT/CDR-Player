@@ -1,18 +1,22 @@
-import fetchPlaylistHtml from '~~/lib/fetchPlaylistHtml'
-import getTracks, { getSeparator } from '~~/lib/getTracks'
+import fetchPlaylistHtml from '@/lib/fetchPlaylistHtml'
+import getTracks, { getSeparator } from '@/lib/getTracks'
 
-export default defineEventHandler(async (event) => {
-	const html = await fetchPlaylistHtml()
-	let playlist
+export default defineEventHandler(async () => {
+  const html = await fetchPlaylistHtml()
 
-	if (html) {
-		playlist = {
-			nowPlaying: getTracks('playing_track', html),
-			comingSoon: getTracks('comming-soon', html),
-			recentlyPlayed: getTracks('recent-tracks', html),
-			separator: getSeparator(html),
-		}
-	}
+  if (html) {
+    return {
+      nowPlaying: getTracks('playing_track', html) || [],
+      comingSoon: getTracks('comming-soon', html) || [],
+      recentlyPlayed: getTracks('recent-tracks', html) || [],
+      separator: getSeparator(html) || [],
+    }
+  }
 
-	return playlist
+  return {
+    nowPlaying: [],
+    comingSoon: [],
+    recentlyPlayed: [],
+    separator: [],
+  }
 })
