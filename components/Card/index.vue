@@ -10,7 +10,7 @@ section {
   background-color: rgb(var(--color-foreground) / 50%);
   box-shadow: var(--shadow);
   margin-bottom: var(--spacing-medium);
-  padding: 1rem;
+  padding: 1rem 0;
   position: relative;
   width: 100%;
 }

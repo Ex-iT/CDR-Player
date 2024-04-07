@@ -100,5 +100,6 @@ article {
 .content {
   height: 100%;
   overflow: auto;
+  padding: 0 1rem;
 }
 </style>

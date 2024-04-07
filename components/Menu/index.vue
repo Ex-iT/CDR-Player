@@ -1,6 +1,7 @@
 <script setup lang="ts">
-function handleClick() {
-  console.log('@TODO: implement this')
+async function handleClick() {
+  // console.log('@TODO: implement this')
+  await navigateTo('/about')
 }
 </script>
 
@@ -20,7 +21,8 @@ button {
   color: rgb(var(--color-foreground));
   cursor: pointer;
   height: 48px;
-  transition: background-color var(--transition), background-color var(--transition);
+  transform-origin: center right;
+  transition: background-color var(--transition), transform var(--transition);
   width: 48px;
 }
 

@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <article>
-    <TransitionGroup name="fade" tag="ul">
+    <TransitionGroup class="list" name="fade" tag="ul">
       <li v-for="track in tracks" :key="`track-${track.artist}-${track.title}`">
         <template v-if="track.timestamp">
           [{{ track.timestamp }}]
@@ -19,10 +19,7 @@ defineProps<{
 </template>
 
 <style scoped>
-/* Needs to be a deep selector in order to make
- * it work with the TransitionGroup component.
- */
-:deep(ul) {
+.list {
   list-style: none;
   padding: 0;
   position: relative;
@@ -30,7 +27,11 @@ defineProps<{
 
 li {
   background-color: rgb(var(--color-foreground) / 20%);
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
   font-size: 1.2rem;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   padding: var(--spacing-small) var(--spacing-small);
 }
 

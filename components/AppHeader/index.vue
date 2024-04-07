@@ -30,12 +30,6 @@ header {
   }
 }
 
-@media (width > 1280px) {
-  header {
-    padding-right: 0;
-  }
-}
-
 a {
   transform-origin: center left;
 }
