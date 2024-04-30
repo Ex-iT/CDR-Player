@@ -1,31 +1,30 @@
 <script setup lang="ts">
-import { STORE_USER_SETTINGS } from '@/config'
 import isItNight from '@/lib/isItNight'
+import { STORE_USER_SETTINGS } from '@/config'
 import type { UserSettings } from '@/types/sharedTypes'
 
 const isNight = isItNight()
 const userSettings = useWebStorage(STORE_USER_SETTINGS)
-const theme = userSettings.get<UserSettings>('theme')
-const src = ref(isNight ? 'background-night.webp' : 'background.webp')
+const theme = computed<UserSettings['theme']>(() => userSettings.store.value.theme)
+const src = computed(() => {
+  let image = isNight ? 'background-night.webp' : 'background.webp'
 
-function setBackground() {
-  switch (theme) {
+  switch (theme.value) {
     case 'day':
-      src.value = 'background.webp'
+      image = 'background.webp'
       break
 
     case 'night':
-      src.value = 'background-night.webp'
+      image = 'background-night.webp'
       break
 
     case 'auto':
-      src.value = isNight ? 'background-night.webp' : 'background.webp'
+    default:
+      image = isNight ? 'background-night.webp' : 'background.webp'
       break
   }
-}
 
-onMounted(() => {
-  setBackground()
+  return image
 })
 </script>
 
@@ -40,11 +39,11 @@ onMounted(() => {
     </AppFooter>
   </div>
   <BackgroundImage :src="`/img/${src}`" />
-  <!-- <ClientOnly>
+  <ClientOnly>
     <template #fallback>
       <BackgroundImage src="/img/background.webp" />
     </template>
-  </ClientOnly> -->
+  </ClientOnly>
 </template>
 
 <style scoped>

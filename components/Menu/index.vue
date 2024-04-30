@@ -1,7 +1,16 @@
 <script setup lang="ts">
+import { STORE_USER_SETTINGS } from '@/config'
+import type { UserSettings } from '@/types/sharedTypes'
+
+const userSettings = useWebStorage<UserSettings>(STORE_USER_SETTINGS)
+const isLeftHanded = computed(() => userSettings.store.value.leftHanded)
+const theme = computed(() => userSettings.store.value.theme)
+
 async function handleClick() {
-  // console.log('@TODO: implement this')
-  await navigateTo('/about')
+  userSettings.set<UserSettings>({
+    leftHanded: !isLeftHanded.value,
+    theme: theme.value === 'night' ? 'day' : 'night',
+  })
 }
 </script>
 

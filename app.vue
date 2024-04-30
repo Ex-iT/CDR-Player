@@ -9,10 +9,9 @@ const initialUserSettings: UserSettings = {
   theme: 'auto',
 }
 const userSettings = useWebStorage<UserSettings>(STORE_USER_SETTINGS, initialUserSettings)
-const isLeftHanded = userSettings.get('leftHanded')
-const theme = userSettings.get<UserSettings>('theme')
-
-const bodyClasses = `${theme ? `theme-${theme}` : ''} ${isNight ? 'is-night' : 'is-day'} ${isLeftHanded ? 'left-handed' : ''}`
+const isLeftHanded = computed(() => userSettings.store.value.leftHanded)
+const theme = computed(() => userSettings.store.value.theme)
+const bodyClasses = computed(() => `${theme.value ? `theme-${theme.value}` : ''} ${isNight ? 'is-night' : 'is-day'} ${isLeftHanded.value ? 'left-handed' : ''}`)
 
 useHead({
   bodyAttrs: {

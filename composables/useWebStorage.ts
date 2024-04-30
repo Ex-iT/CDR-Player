@@ -1,22 +1,23 @@
+const storeData: Ref<Record<any, never>> = ref({})
+
 export default function main<T>(
   store: string,
   initialValue?: T,
 ) {
   const isClient = typeof window != 'undefined'
   const storage = isClient ? window.localStorage : undefined
-  let storeData: T | Record<string, never> = {}
 
   if (storage && store) {
     try {
       const previousStore = storage.getItem(store)
       if (previousStore) {
-        storeData = JSON.parse(previousStore)
+        storeData.value = JSON.parse(previousStore)
       } else {
         storage.setItem(store, JSON.stringify(initialValue))
-        storeData = JSON.parse(storage.getItem(store) || '{}')
+        storeData.value = JSON.parse(storage.getItem(store) || '{}')
       }
     } catch (_error) {
-      storeData = {}
+      storeData.value = {}
     }
   }
 
@@ -24,9 +25,10 @@ export default function main<T>(
     if (storage && store) {
       try {
         const currentStore = JSON.parse(storage.getItem(store) || '{}')
-        const newStore: T = Object.assign({}, currentStore, value)
+        const newStore = Object.assign({}, currentStore, value)
 
         storage.setItem(store, JSON.stringify(newStore))
+        storeData.value = newStore
 
         return newStore
       } catch (_error) {

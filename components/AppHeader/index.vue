@@ -12,7 +12,7 @@
 
 <style scoped>
 header {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   grid-area: header;
