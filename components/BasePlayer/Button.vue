@@ -13,10 +13,18 @@ defineEmits(['click'])
     :disabled="isLoading"
     @click="$emit('click', $event)"
   >
-    <span class="sr-only">
-      {{ isPlaying ? 'Stop' : 'Play' }}
-    </span>
     <svg viewBox="0 0 72 72">
+      <title>
+        <template v-if="!isPlaying && !isLoading">
+          Start playing
+        </template>
+        <template v-if="isPlaying">
+          Stop playing
+        </template>
+        <template v-if="isLoading">
+          Loading player...
+        </template>
+      </title>
       <path
         v-if="!isPlaying && !isLoading"
         fill="currentColor"

@@ -17,6 +17,7 @@ async function handleClick() {
 <template>
   <button type="button" @click="handleClick">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14">
+      <title>Menu</title>
       <path fill="currentColor" d="M0 0h17l-.28 2H0zm0 6h16.15l-.28 2H0zm0 6h15.31l-.28 2H0z" />
     </svg>
   </button>

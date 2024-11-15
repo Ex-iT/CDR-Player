@@ -31,7 +31,7 @@ function handleClose() {
     <h3>Credits</h3>
     <ul>
       <li>
-        Music and track data from <NuxtLink to="https://www.cooldanceradio.com/" target="_blank">Cool Dance Radio</NuxtLink>
+        Stream and track data from <NuxtLink to="https://www.cooldanceradio.com/" target="_blank">Cool Dance Radio</NuxtLink>
       </li>
       <li>
         Day background image by <NuxtLink to="https://pixabay.com/users/tiagocipriano-8062125/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3157732" target="_blank">Tiago Cipriano</NuxtLink>

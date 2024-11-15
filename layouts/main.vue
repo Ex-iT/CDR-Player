@@ -1,33 +1,3 @@
-<script setup lang="ts">
-import isItNight from '@/lib/isItNight'
-import { STORE_USER_SETTINGS } from '@/config'
-import type { UserSettings } from '@/types/sharedTypes'
-
-const isNight = isItNight()
-const userSettings = useWebStorage(STORE_USER_SETTINGS)
-const theme = computed<UserSettings['theme']>(() => userSettings.store.value.theme)
-const src = computed(() => {
-  let image = isNight ? 'background-night.webp' : 'background.webp'
-
-  switch (theme.value) {
-    case 'day':
-      image = 'background.webp'
-      break
-
-    case 'night':
-      image = 'background-night.webp'
-      break
-
-    case 'auto':
-    default:
-      image = isNight ? 'background-night.webp' : 'background.webp'
-      break
-  }
-
-  return image
-})
-</script>
-
 <template>
   <div class="app">
     <AppHeader />
@@ -38,12 +8,7 @@ const src = computed(() => {
       <slot name="footer" />
     </AppFooter>
   </div>
-  <BackgroundImage :src="`/img/${src}`" />
-  <ClientOnly>
-    <template #fallback>
-      <BackgroundImage src="/img/background.webp" />
-    </template>
-  </ClientOnly>
+  <Background />
 </template>
 
 <style scoped>
