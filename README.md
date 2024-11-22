@@ -7,13 +7,13 @@ Code style is enforced with [@antfu/eslint-config](https://github.com/antfu/esli
 
 ```bash
 # Install dependencies
-$ yarn install
+$ bun install
 
 # Serve at localhost:3000
-$ yarn dev
+$ bun dev
 
 # Run code linters
-$ yarn lint
+$ bun lint
 ```
 
 # Credits
