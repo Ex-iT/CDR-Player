@@ -13,3 +13,4 @@ These are development notes for bug or feature to be implemented.
   - [X] Add light/dark theme toggle in the menu (or somewhere else?)
   - [ ] Add right/left handed toggle in the menu
 - [X] Remove unused icon components
+- [ ] Handle fetch fails (playlists and stream)

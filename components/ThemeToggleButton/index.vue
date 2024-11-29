@@ -63,6 +63,7 @@ button {
   align-items: center;
   background-color: rgb(var(--color-foreground) / 40%);
   border: 1px solid rgb(var(--color-border));
+  border-left: none;
   color: rgb(var(--color-text));
   cursor: pointer;
   display: flex;
