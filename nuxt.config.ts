@@ -2,7 +2,10 @@ import { CDR_BASE_URL } from './config'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2024-11-29',
+
   devtools: { enabled: false },
+
   app: {
     head: {
       title: 'CDR Player - Out of love for Cool Dance Radio ❤',
@@ -58,12 +61,15 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   css: ['@/assets/css/main.css'],
-  modules: ['@nuxtjs/google-fonts', '@nuxt/image'],
+  modules: ['@nuxtjs/google-fonts', '@nuxt/image', '@vueuse/nuxt'],
+
   typescript: {
     typeCheck: true,
     strict: true,
   },
+
   googleFonts: {
     download: true,
     inject: true,

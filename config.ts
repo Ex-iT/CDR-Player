@@ -7,5 +7,5 @@ export const STREAM_SOURCES = [
     type: 'audio/mp3',
   },
 ]
-export const REFRESH_TIMEOUT = 10_000
+export const REFRESH_TIMEOUT = 10_000 // 10 seconds
 export const STORE_USER_SETTINGS = 'user-settings-v1'

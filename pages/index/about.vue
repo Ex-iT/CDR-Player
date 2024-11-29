@@ -41,6 +41,9 @@ function handleClose() {
         Night background image by <NuxtLink to="https://unsplash.com/@tata_morais?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Thais Morais</NuxtLink>
         from <NuxtLink to="https://unsplash.com/photos/uxLHRLkwzhI?utm_source=unsplash&utm_medium=referral" target="_blank">Unsplash</NuxtLink>
       </li>
+      <li>
+        <NuxtLink to="https://icon-sets.iconify.design/ic/" target="_blank">Google Material Icons</NuxtLink>
+      </li>
     </ul>
   </Window>
 </template>

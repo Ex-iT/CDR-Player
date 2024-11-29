@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import IconPlay from '@/icons/IconPlay.vue'
+import IconStop from '@/icons/IconStop.vue'
+import IconLoading from '@/icons/IconLoading.vue'
+
 defineProps<{
   isPlaying: boolean
   isLoading: boolean
@@ -13,54 +17,20 @@ defineEmits(['click'])
     :disabled="isLoading"
     @click="$emit('click', $event)"
   >
-    <svg viewBox="0 0 72 72">
-      <title>
-        <template v-if="!isPlaying && !isLoading">
-          Start playing
-        </template>
-        <template v-if="isPlaying">
-          Stop playing
-        </template>
-        <template v-if="isLoading">
-          Loading player...
-        </template>
-      </title>
-      <path
-        v-if="!isPlaying && !isLoading"
-        fill="currentColor"
-        d="M51.47 33.1 26.6 18.46c-2.02-1.18-5.12-.03-5.12 2.9v29.27a3.39 3.39 0 0 0 5.12 2.9L51.47 38.9a3.36 3.36 0 0 0 0-5.8Z"
-      />
-      <rect
-        v-else-if="isPlaying"
-        fill="currentColor"
-        height="32.28"
-        rx="4"
-        width="32.28"
-        x="19.86"
-        y="19.86"
-      />
-      <circle
-        v-if="isLoading"
-        cx="50%"
-        cy="50%"
-        r="45%"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="10%"
-        stroke-linecap="round"
-        stroke-dasharray="130%"
-      >
-        <animateTransform
-          attributeName="transform"
-          attributeType="XML"
-          type="rotate"
-          from="0 36 36"
-          to="360 36 36"
-          dur="1s"
-          repeatCount="indefinite"
-        />
-      </circle>
-    </svg>
+    <span class="sr-only">
+      <template v-if="!isPlaying && !isLoading">
+        Start playing
+      </template>
+      <template v-if="isPlaying">
+        Stop playing
+      </template>
+      <template v-if="isLoading">
+        Loading player...
+      </template>
+    </span>
+    <IconPlay v-if="!isPlaying && !isLoading" />
+    <IconStop v-else-if="isPlaying" />
+    <IconLoading v-if="isLoading" />
   </button>
 </template>
 
@@ -111,6 +81,7 @@ button:hover::before {
 }
 
 button svg {
+  color: rgb(var(--color-foreground));
   position: relative;
 }
 

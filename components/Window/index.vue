@@ -30,9 +30,7 @@ onMounted(() => {
     <article>
       <div class="header">
         <h2><span>{{ title }}</span></h2>
-        <NuxtLink :to="closeTo" class="close">
-          X
-        </NuxtLink>
+        <NuxtLink :to="closeTo" class="close">X</NuxtLink>
       </div>
       <Card class="card">
         <div class="content">
@@ -69,6 +67,7 @@ h2 {
   display: inline-block;
   font-family: Oswald, Arial, sans-serif;
   font-size: 1.6rem;
+  font-weight: bold;
   height: 100%;
   margin-left: auto;
   margin-right: 0;
@@ -86,7 +85,7 @@ h2 {
 article {
   height: 100%;
   margin-top: calc(-1 * var(--spacing-large) * 4); /* Compensate for the footer */
-  max-height: 50%;
+  max-height: 55%;
   max-width: 800px;
   width: 100%;
 }

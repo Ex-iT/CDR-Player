@@ -6,7 +6,7 @@
         <span>Player</span>
       </h1>
     </NuxtLink>
-    <Menu />
+    <MenuButton />
   </header>
 </template>
 

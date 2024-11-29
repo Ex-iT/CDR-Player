@@ -1,4 +1,6 @@
-const storeData: Ref<Record<any, never>> = ref({})
+import type { UserSettings } from '@/types/sharedTypes'
+
+const storeData: Ref<UserSettings | Record<string, never>> = ref({})
 
 export default function main<T>(
   store: string,
@@ -21,7 +23,7 @@ export default function main<T>(
     }
   }
 
-  function set<T>(value: { [K in keyof T]?: T[K] }): T | Record<string, never> {
+  function set<T>(value: UserSettings & { [K in keyof T]?: T[K] }): T | Record<string, never> {
     if (storage && store) {
       try {
         const currentStore = JSON.parse(storage.getItem(store) || '{}')

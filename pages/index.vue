@@ -2,7 +2,6 @@
 import { REFRESH_TIMEOUT, STREAM_SOURCES } from '@/config'
 
 const {
-  // pending, // @TODO do something clever while pending
   data: playlist,
   refresh,
 } = await useLazyFetch('/api/v1/playlist', {
@@ -34,11 +33,10 @@ function clearPolling() {
 }
 
 onMounted(() => {
-  // @TODO: Enable when going live
-  // document.addEventListener('visibilitychange', visibilitychange)
+  document.addEventListener('visibilitychange', visibilitychange)
 
   // Start the polling the playlist api
-  // polling()
+  polling()
 })
 
 onBeforeUnmount(() => {
