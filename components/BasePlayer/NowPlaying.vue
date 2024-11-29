@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import formatTrack from '@/lib/formatTrack'
 import type { Track } from '@/types/sharedTypes'
+import formatTrack from '@/lib/formatTrack'
 
 defineProps<{
   track: Track

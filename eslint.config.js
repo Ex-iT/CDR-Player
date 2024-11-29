@@ -14,6 +14,9 @@ export default antfu(
       'vue/singleline-html-element-content-newline': ['error', {
         ignores: ['NuxtLink', 'abbr'],
       }],
+      'unused-imports/no-unused-vars': ['error', {
+        caughtErrorsIgnorePattern: '^_',
+      }],
     },
   },
 )

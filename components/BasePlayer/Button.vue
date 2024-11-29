@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import IconLoading from '@/icons/IconLoading.vue'
 import IconPlay from '@/icons/IconPlay.vue'
 import IconStop from '@/icons/IconStop.vue'
-import IconLoading from '@/icons/IconLoading.vue'
 
 defineProps<{
   isPlaying: boolean

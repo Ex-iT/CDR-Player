@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { STORE_USER_SETTINGS } from '@/config'
 import type { UserSettings } from '@/types/sharedTypes'
-import IcBaselineWbSunny from '@/icons/IcBaselineWbSunny.vue'
-import IcBaselineNightlight from '@/icons/IcBaselineNightlight.vue'
+import { STORE_USER_SETTINGS } from '@/config'
 import IcBaselineBrightness6 from '@/icons/IcBaselineBrightness6.vue'
+import IcBaselineNightlight from '@/icons/IcBaselineNightlight.vue'
+import IcBaselineWbSunny from '@/icons/IcBaselineWbSunny.vue'
 
 interface Button {
   label: string

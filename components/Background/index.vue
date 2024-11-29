@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import isItNight from '@/lib/isItNight'
-import { STORE_USER_SETTINGS } from '@/config'
 import type { UserSettings } from '@/types/sharedTypes'
+import { STORE_USER_SETTINGS } from '@/config'
+import isItNight from '@/lib/isItNight'
 
 const isNight = isItNight()
 const userSettings = useWebStorage(STORE_USER_SETTINGS)

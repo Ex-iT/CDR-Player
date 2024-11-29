@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import type { Source, Track } from '@/types/sharedTypes'
 import Button from './Button.vue'
 import NowPlaying from './NowPlaying.vue'
-import type { Source, Track } from '@/types/sharedTypes'
 
 const props = defineProps<{
   sources: Array<Source>
