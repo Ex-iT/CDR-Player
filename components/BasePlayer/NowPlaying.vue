@@ -25,7 +25,6 @@ p {
   font-family: Oswald, Arial, sans-serif;
   font-size: 1.6rem;
   margin-right: calc(var(--spacing-large) * 5);
-  overflow: hidden;
   text-shadow: 0 0 var(--blur-medium) rgb(var(--color-highlight));
 }
 

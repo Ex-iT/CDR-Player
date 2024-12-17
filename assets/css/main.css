@@ -199,7 +199,7 @@ li {
 .ellipsis {
   -webkit-box-orient: vertical;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
 
