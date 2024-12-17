@@ -9,7 +9,6 @@ defineProps<{
     :key="`picture-${src}`"
     :src="src"
     alt=""
-    role="presentation"
     loading="lazy"
     decoding="async"
   />
