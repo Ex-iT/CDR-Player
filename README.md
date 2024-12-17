@@ -7,13 +7,13 @@ Code style is enforced with [@antfu/eslint-config](https://github.com/antfu/esli
 
 ```bash
 # Install dependencies
-$ bun install
+$ pnpm install
 
 # Serve at localhost:3000
-$ bun dev
+$ pnpm dev
 
 # Run code linters
-$ bun lint
+$ pnpm lint
 ```
 
 # Credits
