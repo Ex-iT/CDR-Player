@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "installCommand": "pnpm install",
   "builds": [
     {
       "src": "nuxt.config.ts",
-      "use": "@nuxtjs/vercel-builder",
       "config": {
         "serverFiles": ["config.ts", "types/**", "lib/**"]
       }
