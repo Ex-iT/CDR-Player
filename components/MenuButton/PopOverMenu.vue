@@ -72,7 +72,11 @@ function closePopover(event: Event) {
 }
 
 ul {
-  padding: 0;
+  padding: 0 var(--spacing-medium);
+
+  @media (width > 412px) {
+    padding: 0;
+  }
 }
 
 li {
