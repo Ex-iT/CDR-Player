@@ -33,7 +33,7 @@ onMounted(() => {
         <NuxtLink :to="closeTo" class="close">X</NuxtLink>
       </div>
       <Card class="card">
-        <div class="content">
+        <div class="content scroll-shadows">
           <slot />
         </div>
       </Card>
@@ -100,5 +100,33 @@ article {
   height: 100%;
   overflow: auto;
   padding: 0 1rem;
+}
+
+.scroll-shadows {
+  background:
+    linear-gradient(
+      #bebfbf, /*  rgb(var(--color-foreground) / 70%) */
+      rgb(255 255 255 / 0%)
+    ) center top,
+
+    linear-gradient(
+      rgb(255 255 255 / 0%),
+      #bebfbf /*  rgb(var(--color-foreground) / 70%) */
+    ) center bottom,
+
+    radial-gradient(
+      farthest-side at 50% 0,
+      rgb(0 0 0 / 20%),
+      rgb(0 0 0 / 0%)
+    ) center top,
+
+    radial-gradient(
+      farthest-side at 50% 100%,
+      rgb(0 0 0 / 20%),
+      rgb(0 0 0 / 0%)
+    ) center bottom;
+  background-attachment: local, local, scroll, scroll;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
 }
 </style>

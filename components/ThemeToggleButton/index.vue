@@ -76,6 +76,7 @@ button {
       background-color var(--transition);
 
   &:first-child {
+    border-left: 1px solid rgb(var(--color-border));
     border-radius: var(--border-radius) 0 0 var(--border-radius);
   }
 
