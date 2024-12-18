@@ -63,7 +63,12 @@ export default defineNuxtConfig({
   },
 
   css: ['@/assets/css/main.css'],
-  modules: ['@nuxtjs/google-fonts', '@nuxt/image', '@vueuse/nuxt'],
+  modules: [
+    '@nuxtjs/google-fonts',
+    '@nuxt/image',
+    '@vueuse/nuxt',
+    'nuxt-security',
+  ],
 
   typescript: {
     typeCheck: true,
