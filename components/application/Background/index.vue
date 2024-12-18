@@ -33,9 +33,9 @@ const backgroundSrc = computed(() => getBackgroundImage(isNight, theme.value))
 
 <template>
   <ClientOnly>
-    <BackgroundImage :src="`/img/${backgroundSrc}`" />
+    <ApplicationBackgroundImage :src="`/img/${backgroundSrc}`" />
     <template #fallback>
-      <BackgroundImage src="/img/background.webp" />
+      <ApplicationBackgroundImage src="/img/background.webp" />
     </template>
   </ClientOnly>
 </template>

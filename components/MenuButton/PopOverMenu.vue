@@ -9,14 +9,21 @@ function closePopover(event: Event) {
 
 <template>
   <nav id="main" ref="refNav" role="menu" popover="auto" anchor="anchor">
-    <Card>
+    <ApplicationCard>
       <ul>
-        <li><ThemeToggleButton /></li>
+        <li>
+          <p>Theme</p>
+          <ThemeToggleButton />
+        </li>
+        <li>
+          <p>Player button</p>
+          <HandToggleButton />
+        </li>
         <li>
           <NuxtLink to="/about" @click="closePopover">About CDR Player</NuxtLink>
         </li>
       </ul>
-    </Card>
+    </ApplicationCard>
   </nav>
 </template>
 

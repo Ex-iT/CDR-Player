@@ -8,9 +8,9 @@ defineProps<{
 
 <template>
   <NuxtLayout name="main">
-    <Card>
+    <ApplicationCard>
       <h2><span>Nothing to see here...</span></h2>
       <p>{{ error.message }}</p>
-    </Card>
+    </ApplicationCard>
   </NuxtLayout>
 </template>

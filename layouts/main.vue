@@ -1,14 +1,14 @@
 <template>
   <div class="app">
-    <AppHeader />
+    <ApplicationHeader />
     <main>
       <slot />
     </main>
-    <AppFooter>
+    <ApplicationFooter>
       <slot name="footer" />
-    </AppFooter>
+    </ApplicationFooter>
   </div>
-  <Background />
+  <ApplicationBackground />
 </template>
 
 <style scoped>

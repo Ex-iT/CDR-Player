@@ -49,14 +49,14 @@ onBeforeUnmount(() => {
   <NuxtLayout name="main">
     <template #default>
       <template v-if="playlist">
-        <Card>
+        <ApplicationCard>
           <h2><span>Coming soon</span></h2>
           <BasePlaylist :tracks="playlist?.comingSoon || []" />
-        </Card>
-        <Card>
+        </ApplicationCard>
+        <ApplicationCard>
           <h2><span>Recently played</span></h2>
           <BasePlaylist :tracks="playlist?.recentlyPlayed || []" />
-        </Card>
+        </ApplicationCard>
       </template>
       <router-view />
     </template>

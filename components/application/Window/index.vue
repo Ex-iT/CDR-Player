@@ -32,11 +32,11 @@ onMounted(() => {
         <h2><span>{{ title }}</span></h2>
         <NuxtLink :to="closeTo" class="close">X</NuxtLink>
       </div>
-      <Card class="card">
+      <ApplicationCard class="card">
         <div class="content scroll-shadows">
           <slot />
         </div>
-      </Card>
+      </ApplicationCard>
     </article>
   </section>
 </template>

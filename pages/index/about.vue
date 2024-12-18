@@ -5,7 +5,7 @@ function handleClose() {
 </script>
 
 <template>
-  <Window title="About Cool Dance Radio Player" @backdrop-click="handleClose" @key-esc="handleClose">
+  <ApplicationWindow title="About Cool Dance Radio Player" @backdrop-click="handleClose" @key-esc="handleClose">
     <p>
       A mobile first, fast, ad and analytics free progressive web app for listening to
       <NuxtLink to="https://www.cooldanceradio.com/" target="_blank">Cool Dance Radio</NuxtLink>.
@@ -20,8 +20,7 @@ function handleClose() {
 
     <h3>Technical info</h3>
     <p>
-      Build with <NuxtLink to="https://nuxt.com/" target="_blank">Nuxt</NuxtLink>,
-      <NuxtLink to="https://vite.nuxtjs.org/" target="_blank">Vite</NuxtLink> and <NuxtLink to="https://www.typescriptlang.org/" target="_blank">TypeScript</NuxtLink>.
+      Build with <NuxtLink to="https://nuxt.com/" target="_blank">Nuxt</NuxtLink> and <NuxtLink to="https://www.typescriptlang.org/" target="_blank">TypeScript</NuxtLink>.
       Code style is enforced with <NuxtLink to="https://github.com/antfu/eslint-config" target="_blank">@antfu/eslint-config</NuxtLink>.
 
       The source code of this project is public and on <NuxtLink to="https://github.com/Ex-iT/CDR-Player" target="_blank">Github</NuxtLink>.
@@ -45,5 +44,5 @@ function handleClose() {
         <NuxtLink to="https://icon-sets.iconify.design/ic/" target="_blank">Google Material Icons</NuxtLink>
       </li>
     </ul>
-  </Window>
+  </ApplicationWindow>
 </template>
