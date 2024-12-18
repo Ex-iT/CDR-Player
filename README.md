@@ -1,19 +1,27 @@
 # Cool Dance Radio Player
 
-A mobile first, fast, ad and analytics free progressive web app for listening to [Cool Dance Radio](https://www.cooldanceradio.com/). Build with [NuxtJS](https://nuxt.com/), [Vite](https://vite.nuxtjs.org/) and [TypeScript](https://www.typescriptlang.org/).
+A mobile first, fast, ad and analytics free progressive web app for listening to [Cool Dance Radio](https://www.cooldanceradio.com/). Build with [Nuxt3](https://nuxt.com/) and [TypeScript](https://www.typescriptlang.org/).
 Code style is enforced with [@antfu/eslint-config](https://github.com/antfu/eslint-config).
 
 ## Development
 
+Prerequisites:
+- [Node.js](https://nodejs.org/) v20.x
+- [pNpm](https://pnpm.io/) v9.x
+
+Install dependencies
 ```bash
-# Install dependencies
-$ pnpm install
+pnpm install
+```
 
-# Serve at localhost:3000
-$ pnpm dev
+Serve at localhost:3000
+```bash
+pnpm dev
+```
 
-# Run code linters
-$ pnpm lint
+Run code linters
+```bash
+pnpm lint
 ```
 
 # Credits
