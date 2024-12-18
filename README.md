@@ -14,7 +14,7 @@ Install dependencies
 pnpm install
 ```
 
-Serve at localhost:3000
+Serve at [localhost:3000](http://localhost:3000/)
 ```bash
 pnpm dev
 ```
