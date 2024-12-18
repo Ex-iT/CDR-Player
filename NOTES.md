@@ -1,6 +1,6 @@
 # Notes
 
-These are development notes for bug or feature to be implemented.
+These are development notes for bugs or features to be implemented.
 
 ## TODO
 
