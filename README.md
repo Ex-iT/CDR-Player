@@ -1,3 +1,5 @@
+[![ci](https://github.com/Ex-iT/CDR-Player/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Ex-iT/CDR-Player/actions/workflows/ci.yml)  [![Vercel](https://vercelbadge.vercel.app/api/ex-it/cdr-player)](https://cdr.ex-it.nl/)
+
 # Cool Dance Radio Player
 
 A mobile first, fast, ad and analytics free progressive web app for listening to [Cool Dance Radio](https://www.cooldanceradio.com/). Build with [Nuxt3](https://nuxt.com/) and [TypeScript](https://www.typescriptlang.org/).
