@@ -18,7 +18,6 @@ header {
   grid-area: header;
   justify-content: space-between;
   margin: 0 auto var(--spacing-medium);
-  padding-right: 1rem;
   padding-top: var(--spacing-medium);
   width: 100%;
 }
@@ -26,7 +25,6 @@ header {
 @media (width > 412px) {
   header {
     max-width: var(--width-max);
-    padding-right: var(--spacing-larger);
   }
 }
 

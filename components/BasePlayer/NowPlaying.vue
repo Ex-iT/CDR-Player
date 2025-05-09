@@ -14,6 +14,9 @@ defineProps<{
       class="ellipsis"
       :title="formatTrack(track)"
     >
+      <span class="sr-only">
+        Now playing:
+      </span>
       {{ formatTrack(track) }}
     </p>
   </transition>
