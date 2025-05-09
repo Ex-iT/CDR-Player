@@ -12,7 +12,7 @@ export interface Button {
 }
 
 const props = withDefaults(defineProps<{
-  buttons: Button[]
+  buttons?: Button[]
 }>(), {
   buttons: () => [],
 })

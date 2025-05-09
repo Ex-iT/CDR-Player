@@ -2,7 +2,7 @@ import { CDR_BASE_URL } from './config'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-29',
+  compatibilityDate: '2025-05-09',
 
   devtools: { enabled: false },
 
@@ -19,7 +19,6 @@ export default defineNuxtConfig({
           content: 'width=device-width, initial-scale=1',
         },
         {
-          hid: 'description',
           name: 'description',
           content: 'Only the best organic & downtempo melodic house',
         },

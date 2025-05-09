@@ -52,8 +52,10 @@ function closePopover(event: Event) {
     opacity: 0;
     position-try-fallbacks: flip-block, flip-inline;
     position-try-options: flip-block, flip-inline;
+    /* stylelint-disable-next-line declaration-property-value-no-unknown */
     right: anchor(right);
     scale: 0.9;
+    /* stylelint-disable-next-line declaration-property-value-no-unknown */
     top: anchor(bottom);
     transition:
       display var(--speed) allow-discrete,

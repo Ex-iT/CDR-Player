@@ -46,9 +46,8 @@ li:first-child {
 li:last-child {
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
-  mask:
-    linear-gradient(#000 0 0),
-    linear-gradient(#0000,#000 90%) padding-box;
+  /* stylelint-disable-next-line declaration-property-value-no-unknown */
+  mask: linear-gradient(#000 0 0), linear-gradient(#0000,#000 90%) padding-box;
   mask-composite: exclude;
 }
 
