@@ -2,9 +2,11 @@
 import type { Track } from '@/types/sharedTypes'
 import formatTrack from '@/lib/formatTrack'
 
-defineProps<{
+const props = defineProps<{
   track: Track
 }>()
+
+const formattedTrack = computed(() => formatTrack(props.track))
 </script>
 
 <template>
@@ -12,12 +14,12 @@ defineProps<{
     <p
       :key="`${track.artist}-${track.title}`"
       class="ellipsis"
-      :title="formatTrack(track)"
+      :title="formattedTrack"
     >
       <span class="sr-only">
         Now playing:
       </span>
-      {{ formatTrack(track) }}
+      {{ formattedTrack }}
     </p>
   </transition>
 </template>

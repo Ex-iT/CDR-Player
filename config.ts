@@ -7,5 +7,6 @@ export const STREAM_SOURCES = [
     type: 'audio/mp3',
   },
 ]
+export const STREAM_STATS_URL = 'http://stream.cooldanceradio.com:8360/stats?sid=1&json=1'
 export const REFRESH_TIMEOUT = 10_000 // 10 seconds
 export const STORE_USER_SETTINGS = 'user-settings-v1'
