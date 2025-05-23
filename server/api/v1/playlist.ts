@@ -1,32 +1,19 @@
-// import fetchPlaylistHtml from '@/lib/fetchPlaylistHtml'
-// import getTracks, { getSeparator } from '@/lib/getTracks'
-import fetchStats from '@/lib/fetchStats'
+import fetchHistoryHtml from '@/lib/fetchHistoryHtml'
+import getTracksFromHistory from '@/lib/getTracksFromHistory'
 
 export default defineEventHandler(async () => {
-  const stats = await fetchStats()
+  const historyHtml = await fetchHistoryHtml()
 
-  if (stats) {
+  if (historyHtml) {
+    const history = getTracksFromHistory(historyHtml)
+
     return {
-      nowPlaying: [{
-        artist: stats.songtitle,
-        title: '',
-        timestamp: '',
-      }],
+      nowPlaying: history.filter(track => track.current),
       comingSoon: [],
-      recentlyPlayed: [],
+      recentlyPlayed: history.filter(track => !track.current),
       separator: [],
     }
   }
-  // const html = await fetchPlaylistHtml()
-
-  // if (html) {
-  //   return {
-  //     nowPlaying: getTracks('playing_track', html) || [],
-  //     comingSoon: getTracks('comming-soon', html) || [],
-  //     recentlyPlayed: getTracks('recent-tracks', html) || [],
-  //     separator: getSeparator(html) || [],
-  //   }
-  // }
 
   return {
     nowPlaying: [],

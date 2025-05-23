@@ -8,13 +8,16 @@ defineProps<{
 
 <template>
   <article>
-    <TransitionGroup class="list" name="fade" tag="ul">
+    <TransitionGroup v-if="tracks.length" class="list" name="fade" tag="ul">
       <li v-for="track in tracks" :key="`track-${track.artist}-${track.title}`">
         <template v-if="track.timestamp">
           [{{ track.timestamp }}]
         </template>{{ track.artist }} - {{ track.title }}
       </li>
     </TransitionGroup>
+    <p v-else>
+      No info
+    </p>
   </article>
 </template>
 
