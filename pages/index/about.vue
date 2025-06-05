@@ -33,14 +33,6 @@ function handleClose() {
         Stream and track data from <NuxtLink to="https://www.cooldanceradio.com/" target="_blank">Cool Dance Radio</NuxtLink>
       </li>
       <li>
-        Day background image by <NuxtLink to="https://pixabay.com/users/tiagocipriano-8062125/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3157732" target="_blank">Tiago Cipriano</NuxtLink>
-        from <NuxtLink to="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3157732" target="_blank">Pixabay</NuxtLink>
-      </li>
-      <li>
-        Night background image by <NuxtLink to="https://unsplash.com/@tata_morais?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Thais Morais</NuxtLink>
-        from <NuxtLink to="https://unsplash.com/photos/uxLHRLkwzhI?utm_source=unsplash&utm_medium=referral" target="_blank">Unsplash</NuxtLink>
-      </li>
-      <li>
         <NuxtLink to="https://icon-sets.iconify.design/ic/" target="_blank">Google Material Icons</NuxtLink>
       </li>
     </ul>

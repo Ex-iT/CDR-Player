@@ -35,12 +35,12 @@ function clearPolling() {
 onMounted(() => {
   document.addEventListener('visibilitychange', visibilitychange)
 
-  // Start the polling the playlist api
   polling()
 })
 
 onBeforeUnmount(() => {
   clearPolling()
+
   document.removeEventListener('visibilitychange', visibilitychange)
 })
 </script>
@@ -49,9 +49,9 @@ onBeforeUnmount(() => {
   <NuxtLayout name="main">
     <template #default>
       <template v-if="playlist">
-        <ApplicationCard>
+        <ApplicationCard v-if="playlist?.comingSoon.length">
           <h2><span>Coming soon</span></h2>
-          <BasePlaylist :tracks="playlist?.comingSoon || []" />
+          <BasePlaylist :tracks="playlist?.comingSoon" />
         </ApplicationCard>
         <ApplicationCard>
           <h2><span>Recently played</span></h2>

@@ -85,7 +85,7 @@ h2 {
 article {
   height: 100%;
   margin-top: calc(-1 * var(--spacing-large) * 4); /* Compensate for the footer */
-  max-height: 55%;
+  max-height: 50%;
   max-width: 800px;
   width: 100%;
 }
